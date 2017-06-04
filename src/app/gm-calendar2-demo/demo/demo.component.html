@@ -1,0 +1,21 @@
+<div class="nav nav-tabs">
+  <div class="nav-item">
+    <a class="nav-link" [routerLink]="['./', { mode: 'month' }]" [class.active]="mode=='month'">Month</a>
+  </div>
+  <div class="nav-item">
+    <a class="nav-link" [routerLink]="['./', { mode: 'day' }]" [class.active]="mode=='day'">Day</a>
+  </div>
+</div>
+
+<div *ngIf="mode=='day'"style="height:500px; overflow:auto">
+  <gm-day-view-container style="height:1200px" [scrollToHour]="7">
+    <gm-day-view>
+      <gm-event-view *ngFor="let item of items" [item]="item">
+        {{item.title}}
+      </gm-event-view>
+    </gm-day-view>
+  </gm-day-view-container>
+</div>
+
+<gm-month-view *ngIf="mode=='month'" [date]="monthDate" [items]="items">
+</gm-month-view>

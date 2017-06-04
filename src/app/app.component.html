@@ -1,3 +1,17 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <h2>Demos</h2>
+  <div class="row">
+    <div class="col" style="flex-grow:0">
+      <ul class="nav flex-column sticky">
+        <li class="nav-item">
+          <a class="nav-link" routerLink='gm.calendar2' routerLinkActive="bg-primary text-white">gm.calendar2</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="col">
+      <router-outlet>
+      </router-outlet>
+    </div>
+  </div>
+</div>
