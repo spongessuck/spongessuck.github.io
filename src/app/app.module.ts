@@ -5,10 +5,12 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { appRoutes } from './app.routes';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
