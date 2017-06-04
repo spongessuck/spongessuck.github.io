@@ -1,0 +1,3 @@
+[submodule "ng2"]
+	path = ng2
+	url = ./ng2
